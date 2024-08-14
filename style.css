@@ -21,6 +21,7 @@
 
 body{
     background-color: var(--bg);
+    overflow-x: hidden;
 }
 
 section{
@@ -47,17 +48,25 @@ section{
     padding-bottom: 1.5rem;
 }
 
+.navbar{
+    display: flex;
+    flex-direction: column;
+}
+
 .navbar a{
-    margin: 0 1.4rem;
-    font-size: 1.8rem;
-    color: #fff;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    background-color: var(--bg);
+    color: white;
+    border-top: 2px solid gray;
 }
 
 .navbar a:hover{
     color: var(--main-color);
-    border-bottom: 0.1rem solid var(--main-color);
     padding-bottom: 0.5rem;
-    font-size: 2rem;
+    font-size: 1.3rem;
 }
 
 .icons img{
@@ -66,10 +75,11 @@ section{
 }
 
 .icons img:hover{
-    width: 28px;
-    height: 28px;
+    width: 27px;
+    height: 27px;
 }
 
+/*Botao geral*/
 .btn {
     background: var(--main-color);
     color: #fff;
@@ -102,12 +112,12 @@ section{
 
 .content h3{
     color: #fff;
-    font-size: 6rem;
+    font-size: 4rem;
 }
 
 .content p{
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 100;
     line-height: 1.8;
     padding: 1rem 0;
@@ -128,11 +138,18 @@ section{
     text-transform: uppercase;
 }
 
+.image1{
+    width: 95%;
+    margin: auto;
+    padding: 1rem;
+}
+
 .about .row{
     display: flex;
+    flex-direction: column;
     align-items: center;
     background-color: var(--black);
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .about .row .content{
@@ -229,7 +246,11 @@ section{
 
 /*-----------------------------------------------------------------------------------------------------------*/
 
-
+.iframe{
+    width: 50%;
+    margin: 2rem;
+    padding: 1rem;
+}
 .address{
     display: flex;
     flex-direction: column;
