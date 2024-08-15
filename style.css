@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 :root{
     --main-color: #d3ad7F;
     --black: #13131a;
@@ -20,7 +18,7 @@
 }
 
 body{
-    background-color: var(--bg);
+    background-color: var(--black);
     overflow-x: hidden;
 }
 
@@ -30,56 +28,78 @@ section{
     max-width: 1200px;
 }
 
-.header{
+header{
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 99;
-    border-bottom: var(--border);
     background-color: var(--bg);
-}
-
-.header section{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    border-bottom: var(--border);
 }
 
 .navbar{
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem 6rem;
+    align-items: center;
 }
 
-.navbar a{
-    display: block;
-    padding: 10px;
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.nav-list{
+    display: flex;
+    align-items: center;
+}
+
+.nav-list ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.item{
+    margin: 0 15px;
+}
+
+.link{
     text-decoration: none;
-    text-align: center;
-    background-color: var(--bg);
-    color: white;
-    border-top: 2px solid gray;
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 400;
+    justify-content: center;
+    transition: .3s;
 }
-
-.navbar a:hover{
+.link:hover{
     color: var(--main-color);
-    padding-bottom: 0.5rem;
-    font-size: 1.3rem;
 }
 
-.icons img{
-    margin: 1rem;
-    cursor: pointer;
+.login-button button{
+    border: none;
+    background-color: var(--main-color);
+    padding: 10px 15px;
+    border-radius: 5px;
 }
 
-.icons img:hover{
-    width: 27px;
-    height: 27px;
+.login-button button a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.5rem;
 }
 
-/*Botao geral*/
+.mobileMenu{
+    display: none;
+}
+
+.menu-mobile{
+    display: none;
+}
+
+/*-------------botao geral---------------------*/
 .btn {
     background: var(--main-color);
     color: #fff;
@@ -93,7 +113,10 @@ section{
 .btn:hover{
     letter-spacing: .1rem;
 }
-/*=------------------------------------------------------------------------------------------------------------------*/
+
+
+/*-------------home---------------------*/
+
 .home-container{
     background: url(./img/home-img.jpg);
     background-position: center;
@@ -112,7 +135,7 @@ section{
 
 .content h3{
     color: #fff;
-    font-size: 4rem;
+    font-size: 6rem;
 }
 
 .content p{
@@ -123,7 +146,7 @@ section{
     padding: 1rem 0;
 }
 
-/*----------------------------------------------------------------=-=====--------------------------------------*/
+/*-------------SOBRE-------------------------------*/
 
 .title{
     font-size: 4rem;
@@ -146,10 +169,28 @@ section{
 
 .about .row{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     background-color: var(--black);
     gap: 1rem;
+    padding: 2rem;         
+    overflow: hidden; 
+}
+
+.about .container-img {
+    flex: 1;               
+    max-width: 100%;  
+}
+
+.about .container-img img {
+    width: 100%;          
+    height: auto;           
+    display: block;      
+}
+
+.about .content {
+    flex: 2;             
+    padding: 2rem;          
 }
 
 .about .row .content{
@@ -168,7 +209,7 @@ section{
     line-height: 1.8;
 }
 
-/*----------------------------------------------------------------------------------------------------------*/
+/*-----------menu--------------------------------------------------------*/
 
 .box-container {
     display: grid;
@@ -187,7 +228,6 @@ section{
     background-color: #fff;
 
 }
-
 
 .menu .box-container .box:hover>*{
     color: var(--black);
@@ -215,8 +255,8 @@ section{
     font-weight: lighter;
 }
 
-/*-------------------------------------------------------------------------------------------------------------------------------------------------*/
 
+/*----------review-------------------------------------------------------------------------*/
 
 .review .box-container .box{
     padding: 3rem 2rem;
@@ -242,9 +282,7 @@ section{
     border-radius: 50%;
 }
 
-
-
-/*-----------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------*/
 
 .iframe{
     width: 50%;
@@ -275,4 +313,3 @@ section{
 .footer img:hover{
     background-color: var(--main-color);
 }
-

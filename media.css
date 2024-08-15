@@ -1,232 +1,55 @@
-@charset "UTF-8";
-
-@media (min-width: 980px) {
-
-    :root{
-        --main-color: #d3ad7F;
-        --black: #13131a;
-        --bg: #010103;
-        --border: 0.1rem solid rgba(255, 255, 255, 0.3);
-        font-size: 10px;
-    }
-    
-    
-    body{
-        background-color: var(--bg);
-    }
-    
-    
-    .header section{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
-    }
-
+@media screen and (max-width: 740px){
     .navbar{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-    
-    .navbar a{
-        display: flex;
-        border-top: none;
-        margin: 0 1.4rem;
-        font-size: 1.8rem;
-        color: #fff;
-    }
-    
-    .navbar a:hover{
-        color: var(--main-color);
-        border-bottom: 0.1rem solid var(--main-color);
-        padding-bottom: 0.5rem;
-        font-size: 2rem;
+        padding: 1.5rem 4rem;
     }
 
-    #burguer{
+    .item{
         display: none;
     }
-    
-    .icons img:hover{
-        width: 28px;
-        height: 28px;
+
+    .login-button{
+        display: none;
     }
-    
-    /*=------------------------------------------------------------------------------------------------------------------*/
-    .home-container{
-        background: url(./img/home-img.jpg);
-        background-position: center;
-        background-size: cover;
+
+    .mobileMenu{
+        display: block;
     }
-    
-    .home-container section{
-        display: flex;
-        align-items: center;
-        min-height: 100vh;
-    }
-    
-    .content{
-        max-width: 60rem;
-    }
-    
-    .content h3{
-        color: #fff;
-        font-size: 6rem;
-    }
-    
-    .content p{
-        color: #fff;
-        font-size: 2rem;
-        font-weight: 100;
-        line-height: 1.8;
-        padding: 1rem 0;
-    }
-    
-    /*----------------------------------------------------------------=-=====--------------------------------------*/
-    
-    .about .row {
-        display: flex;         
-        flex-direction: row;    
-        align-items: center;    
-        background-color: var(--black);
-        gap: 1rem;             
-        padding: 2rem;         
-        overflow: hidden;       
-    }
-    
-    .about .container-img {
-        flex: 1;               
-        max-width: 100%;  
-    }
-    
-    .about .container-img img {
-        width: 100%;          
-        height: auto;           
-        display: block;      
-    }
-    
-    .about .content {
-        flex: 2;             
-        padding: 2rem;          
-    }
-    
-    .about .row .content h3{
-        font-size: 3rem;
-        color: #fff;
-        padding-bottom: 2rem;
-    }
-    .about .row .content p{
-        font-size: 1.6rem;
-        color: #fff;
-        padding: 1rem 0;
-        line-height: 1.8;
-    }
-    
-    /*----------------------------------------------------------------------------------------------------------*/
-    
-    .box-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(29rem, 1fr));
-        gap: 1.5rem;
-    }
-    
-     .box-container .box{
-        text-align: center;
-        border: var(--border);
-        padding: 5rem;
+    .mobileMenu button{
+        background-color: transparent;
+        border: none;
         cursor: pointer;
     }
-    
-    .menu .box-container .box:hover{
-        background-color: #fff;
-    
-    }
-    
-    
-    .menu .box-container .box:hover>*{
-        color: var(--black);
-    }
-    
-    .menu .box-container .box img{
-        height: 10rem;
-    }
-    
-    .menu .box-container .box h3{
-        color: #fff;
-        font-size: 2rem;
-        padding: 1rem 0;
-    }
-    
-    .box .price{
-        color: #fff;
-        font-size: 2rem;
-        padding: .5rem 0;
-    }
-    
-    .box .price span{
-        font-size: 1.5rem;
-        text-decoration: line-through;
-        font-weight: lighter;
-    }
-    
-    /*-------------------------------------------------------------------------------------------------------------------------------------------------*/
-    
-    
-    .review .box-container .box{
-        padding: 3rem 2rem;
-    }
-    
-    .review .box-container .box h3{
-        color: #fff;
-        font-size: 1.7rem;
-        margin: .5rem;
-    }
-    
-    .review .box-container .box p{
-        font-size: 1.5rem;
-        color: #fff;
-        padding: 2rem 0;
-        line-height: 1.8;
-        font-weight: lighter;
-    }
-    
-    .review .box-container .box .user{
-        height: 7rem;
-        width: 7rem;
-        border-radius: 50%;
-    }
-    
-    
-    
-    /*-----------------------------------------------------------------------------------------------------------*/
-    
-    
-    .address{
+
+
+    .menu-mobile ul{
         display: flex;
         flex-direction: column;
-        align-items: center;
-    }
-    
-    .footer{
         text-align: center;
+        padding-bottom: 1rem;
     }
-    
-    .footer .rede-social{
-        padding: 1rem 0;
+
+    .menu-mobile .item{
+        display: block;
+        padding-top: 1.2rem;
     }
-    
-    .footer img{
-        margin: 0.4rem;
-        cursor: pointer;
-        border-radius: 50%;
-        padding: 1rem;
+
+    .menu-mobile .login-button{
+        display: block;
+        padding: 1rem 2rem;
     }
-    
-    .footer img:hover{
-        background-color: var(--main-color);
+
+    .menu-mobile .login-button button{
+        width: 100%;
     }
-    
-    
+
+    .open{
+        display: block;
+    }
+
+    /*------------------------------------------------------------------------*/
+
+    .about .row{
+        display: flex;
+        flex-direction: column;
+    }
 }
